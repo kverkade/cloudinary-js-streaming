@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "build": "webpack --config webpack.dev.js && webpack --config webpack.prod.js",
+    "prepare": "npm run build",
     "test": "npm run server & mocha test/bootstrap.js --recursive  \"test/**/*.test.js\" --timeout 20000",
     "pretest": "npm run build && npm run copybuild",
     "posttest": "del-cli test/utils/js-streaming*.js",
@@ -17,7 +18,6 @@
     "posttest:with-camera": "npm run posttest",
     "copybuild": "copyfiles -f \"dist/*.js\" \"test/utils\" && echo 'build files copied.'\n",
     "server": "node test/utils/server.js",
-    "prepare": "npm run build",
   },
   "repository": {
     "type": "git",
