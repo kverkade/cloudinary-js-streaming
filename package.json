@@ -9,7 +9,6 @@
   "private": false,
   "scripts": {
     "build": "webpack --config webpack.dev.js && webpack --config webpack.prod.js",
-    "prepare": "npm run build",
     "test": "npm run server & mocha test/bootstrap.js --recursive  \"test/**/*.test.js\" --timeout 20000",
     "pretest": "npm run build && npm run copybuild",
     "posttest": "del-cli test/utils/js-streaming*.js",
