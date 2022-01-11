@@ -5,7 +5,6 @@ bower_components/
 .env
 .env.*
 bin
-dist
 *.map
 !lib
 package-lock.json
